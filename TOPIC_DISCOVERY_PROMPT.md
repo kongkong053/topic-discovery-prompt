@@ -100,6 +100,8 @@
 
 ## 输出
 
+写入前先读 `/root/topic-discovery-prompt/covered_concepts.md` 去重：候选命中"已覆盖概念池"的直接跳过；产出后把新概念追加进该表。
+
 将符合质量门槛的选题写入本选题仓库（topic-discovery-prompt）的本地克隆，**不要写 life-business-video-workflow 仓库的任何文件**（2026-07-17 起选题产出与视频仓库解耦：视频仓库的 `data/topics.csv` 由 `topic-bank.yaml` 自动重建、归视频流水线管，往里追加会造成分叉冲突）：
 
 - 新建 `/root/topic-discovery-prompt/topics_daily_{今天日期}.csv`（当日新增）
