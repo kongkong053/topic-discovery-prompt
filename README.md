@@ -10,6 +10,7 @@
 | `topics.csv` | 选题主库（所有已收录选题；2026-07-14 前的历史行含旧 T 编号，新行一律日期开头） |
 | `topics_daily_*.csv` | 每日新增选题 |
 | `scripts/git_sync_daily_topics.sh` | 自动同步脚本（推送到本仓库） |
+| `covered_concepts.md` | 去重池：已覆盖概念 + 可反复挖的搜索方向（2026-07-17 自视频仓库迁入） |
 
 ## 选题标准
 
