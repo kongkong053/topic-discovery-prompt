@@ -100,10 +100,17 @@
 
 ## 输出
 
-将符合质量门槛的选题写入 `/root/life-business-video-workflow/data/topics.csv`，格式：
+将符合质量门槛的选题写入本选题仓库（topic-discovery-prompt）的本地克隆，**不要写 life-business-video-workflow 仓库的任何文件**（2026-07-17 起选题产出与视频仓库解耦：视频仓库的 `data/topics.csv` 由 `topic-bank.yaml` 自动重建、归视频流水线管，往里追加会造成分叉冲突）：
+
+- 新建 `/root/topic-discovery-prompt/topics_daily_{今天日期}.csv`（当日新增）
+- 追加到 `/root/topic-discovery-prompt/topics.csv`（选题主库）
+
+两个文件格式统一为：
 ```
 date,标题,卧槽点,来源类型,核心数据,适合结构环节
 ```
+
+**不要给选题编 T0xx 编号**——T 编号是视频仓库 `knowledge/topic-bank.yaml` 的 ID 空间，两边各编各的会撞车（历史上本库的 T037/T038 已与视频仓库的正式选题撞号）。本库一律用日期开头的行。
 
 同时在终端输出格式化的选题报告，便于直接阅读。
 ```
